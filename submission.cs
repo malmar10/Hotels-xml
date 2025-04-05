@@ -123,7 +123,7 @@ namespace ConsoleApp1
                 }
 
                 // STEP 5: Serialize to JSON
-                string jsonText = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented, true);
+                string jsonText = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented, false);
                 return jsonText;
             }
             catch
