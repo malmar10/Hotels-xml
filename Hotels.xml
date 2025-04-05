@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="http://venus.sod.asu.edu/WSRepository/xml"
-        xsi:schemaLocation="http://venus.sod.asu.edu/WSRepository/xml hotels-xml/Hotels.xsd">
+        xsi:schemaLocation="http://venus.sod.asu.edu/WSRepository/xml https://malmar10.github.io/Hotels-xml/hotels-xml/Hotels.xsd">
 
 
 

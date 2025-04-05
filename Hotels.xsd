@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns="hotels-xml/Hotels.xml"
-    targetNamespace="hotels-xml/Hotels.xml"
+    xmlns="https://malmar10.github.io/Hotels-xml/hotels-xml/Hotels.xml"
+    targetNamespace="https://malmar10.github.io/Hotels-xml/hotels-xml/Hotels.xml"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
 
