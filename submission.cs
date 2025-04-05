@@ -68,47 +68,71 @@ namespace ConsoleApp1
         {
             try
             {
-                // Try to load XML — if it's malformed, this will throw
+                // STEP 1: Validate the XML using the XSD
+                XmlReaderSettings settings = new XmlReaderSettings();
+                settings.Schemas.Add(null, xsdURL);
+                settings.ValidationType = ValidationType.Schema;
+
+                string errors = "";
+
+                settings.ValidationEventHandler += (sender, args) =>
+                {
+                    errors += args.Message + "\n";
+                };
+
+                using (XmlReader reader = XmlReader.Create(xmlUrl, settings))
+                {
+                    while (reader.Read()) ;
+                }
+
+                if (!string.IsNullOrEmpty(errors))
+                {
+                    return "False";
+                }
+
+                // STEP 2: Load the validated XML
                 XmlDocument doc = new XmlDocument();
                 doc.Load(xmlUrl);
 
-                // Process attributes into elements as required by spec
-                XmlNodeList hotelList = doc.SelectNodes("//Hotel");
-                foreach (XmlNode hotel in hotelList)
+                // STEP 3: Convert @Rating → _Rating
+                XmlNodeList hotels = doc.SelectNodes("//Hotel");
+                foreach (XmlNode hotel in hotels)
                 {
-                    XmlAttribute rating = hotel.Attributes["Rating"];
-                    if (rating != null)
+                    XmlAttribute ratingAttr = hotel.Attributes["Rating"];
+                    if (ratingAttr != null)
                     {
                         XmlElement ratingElem = doc.CreateElement("_Rating");
-                        ratingElem.InnerText = rating.Value;
+                        ratingElem.InnerText = ratingAttr.Value;
                         hotel.AppendChild(ratingElem);
-                        hotel.Attributes.Remove(rating);
+                        hotel.Attributes.Remove(ratingAttr);
                     }
                 }
 
-                XmlNodeList addressList = doc.SelectNodes("//Address");
-                foreach (XmlNode addr in addressList)
+                // STEP 4: Convert @NearestAirport → _NearestAirport
+                XmlNodeList addresses = doc.SelectNodes("//Address");
+                foreach (XmlNode addr in addresses)
                 {
-                    XmlAttribute airport = addr.Attributes["NearestAirport"];
-                    if (airport != null)
+                    XmlAttribute airportAttr = addr.Attributes["NearestAirport"];
+                    if (airportAttr != null)
                     {
                         XmlElement airportElem = doc.CreateElement("_NearestAirport");
-                        airportElem.InnerText = airport.Value;
+                        airportElem.InnerText = airportAttr.Value;
                         addr.AppendChild(airportElem);
-                        addr.Attributes.Remove(airport);
+                        addr.Attributes.Remove(airportAttr);
                     }
                 }
 
-                // Convert XML to JSON
+                // STEP 5: Serialize to JSON
                 string jsonText = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented, true);
                 return jsonText;
             }
             catch
             {
-                // If it's malformed or unreadable XML, return "False"
-                return "False";
+                return "False"; // Catch any exceptions or malformed input
             }
         }
+
+
 
     }
 }

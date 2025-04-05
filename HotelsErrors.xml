@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotel> <!--  Should be <Hotels> -->
-  <Hotel>
+<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://venus.sod.asu.edu/WSRepository/xml"
+        xsi:schemaLocation="http://venus.sod.asu.edu/WSRepository/xml https://malmar10.github.io/Hotels-xml/Hotels.xsd">
+
+	<Hotel>
     <Name>Westin</Name>
     <Phone>480-968-8885</Phone>
     <Phone>800-937-8461</Phone>
