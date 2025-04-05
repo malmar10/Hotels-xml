@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotel> <!--  Should be <Hotels> -->
+  <Hotel>
+    <Name>Westin</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel> <!--  Missing required Rating attribute -->
+    <Name>Hilton Garden Inn</Name>
+    <Phone>602-716-2000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>4000</Number>
+      <Street>N Central Ave</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85012</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="3.5"> <!--  Missing Phone -->
+    <Name>Marriott</Name>
+    <Address NearestAirport="Phoenix-Mesa">
+      <Number>200</Number>
+      <Street>W Rio Salado Pkwy</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.0"> <!--  Missing </Address> closing tag -->
+    <Name>Hyatt</Name>
+    <Phone>602-222-1234</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>100</Number>
+      <Street>E Washington St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    <!-- missing </Address> -->
+  </Hotel>
+
+  <Hotel Rating="4.1">
+    <Name>Courtyard</Name>
+    <Name>Duplicate Name</Name> <!--  Only one <Name> allowed -->
+    <Phone>480-555-1234</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>555</Number>
+      <Street>N Mill Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+</Hotel>

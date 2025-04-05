@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://venus.sod.asu.edu/WSRepository/xml"
+        xsi:schemaLocation="http://venus.sod.asu.edu/WSRepository/xml hotels-xml/Hotels.xsd">
+
+
+
+	<Hotel Rating="4.2">
+		<Name>Westin</Name>
+		<Phone>480-968-8885</Phone>
+		<Phone>800-937-8461</Phone>
+		<Address NearestAirport="Sky Harbor">
+			<Number>11</Number>
+			<Street>E 7th St</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="3.8">
+		<Name>Hilton Garden Inn</Name>
+		<Phone>602-716-2000</Phone>
+		<Address>
+			<Number>4000</Number>
+			<Street>N Central Ave</Street>
+			<City>Phoenix</City>
+			<State>AZ</State>
+			<Zip>85012</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="4.0">
+		<Name>Marriott Tempe</Name>
+		<Phone>480-967-2300</Phone>
+		<Address NearestAirport="Phoenix-Mesa">
+			<Number>200</Number>
+			<Street>W Rio Salado Pkwy</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="4.5">
+		<Name>Hyatt Regency</Name>
+		<Phone>602-252-1234</Phone>
+		<Address>
+			<Number>122</Number>
+			<Street>N 2nd St</Street>
+			<City>Phoenix</City>
+			<State>AZ</State>
+			<Zip>85004</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="3.9">
+		<Name>Courtyard by Marriott</Name>
+		<Phone>480-555-1234</Phone>
+		<Phone>888-555-6789</Phone>
+		<Address NearestAirport="Sky Harbor">
+			<Number>555</Number>
+			<Street>N Mill Ave</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="4.1">
+		<Name>AC Hotel Phoenix</Name>
+		<Phone>602-555-4567</Phone>
+		<Address>
+			<Number>414</Number>
+			<Street>N 5th Ave</Street>
+			<City>Phoenix</City>
+			<State>AZ</State>
+			<Zip>85003</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="3.7">
+		<Name>La Quinta Inn</Name>
+		<Phone>480-555-3333</Phone>
+		<Address NearestAirport="Phoenix-Mesa">
+			<Number>911</Number>
+			<Street>S Rural Rd</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85282</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="4.3">
+		<Name>Drury Inn Suites</Name>
+		<Phone>602-555-9999</Phone>
+		<Address>
+			<Number>333</Number>
+			<Street>E Van Buren St</Street>
+			<City>Phoenix</City>
+			<State>AZ</State>
+			<Zip>85008</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="4.0">
+		<Name>Aloft Tempe</Name>
+		<Phone>480-555-1111</Phone>
+		<Address NearestAirport="Phoenix-Mesa">
+			<Number>951</Number>
+			<Street>E Playa del Norte Dr</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+		</Address>
+	</Hotel>
+
+	<Hotel Rating="3.6">
+		<Name>Best Western Inn</Name>
+		<Phone>602-123-9876</Phone>
+		<Address>
+			<Number>1717</Number>
+			<Street>E Thomas Rd</Street>
+			<City>Phoenix</City>
+			<State>AZ</State>
+			<Zip>85016</Zip>
+		</Address>
+	</Hotel>
+</Hotels>

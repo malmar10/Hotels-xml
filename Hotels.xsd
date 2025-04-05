@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="hotels-xml/Hotels.xml"
+    targetNamespace="hotels-xml/Hotels.xml"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+	<xsd:annotation>
+		<xsd:documentation xml:lang="en">Hotels schema for CSE 445 Assignment 4</xsd:documentation>
+	</xsd:annotation>
+
+	<!-- Root Element -->
+	<xsd:element name="Hotels" type="HotelsType"/>
+
+	<!-- Complex Type for Hotels -->
+	<xsd:complexType name="HotelsType">
+		<xsd:sequence>
+			<xsd:element name="Hotel" type="HotelType" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Complex Type for Hotel -->
+	<xsd:complexType name="HotelType">
+		<xsd:sequence>
+			<xsd:element name="Name" type="xsd:string"/>
+			<xsd:element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="Address" type="AddressType"/>
+		</xsd:sequence>
+		<xsd:attribute name="Rating" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+
+	<!-- Complex Type for Address -->
+	<xsd:complexType name="AddressType">
+		<xsd:sequence>
+			<xsd:element name="Number" type="xsd:string"/>
+			<xsd:element name="Street" type="xsd:string"/>
+			<xsd:element name="City" type="xsd:string"/>
+			<xsd:element name="State" type="xsd:string"/>
+			<xsd:element name="Zip" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="NearestAirport" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+
+</xsd:schema>
