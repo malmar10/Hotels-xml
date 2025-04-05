@@ -15,9 +15,9 @@ namespace ConsoleApp1
     public class Program
     {
         // Hosted URLs (update as needed)
-        public static string xmlURL = "https://malmar10.github.io/Hotels-xml/hotels-xml/Hotels.xml";
-        public static string xmlErrorURL = "https://malmar10.github.io/Hotels-xml/hotels-xml/HotelsErrors.xml";
-        public static string xsdURL = "https://malmar10.github.io/Hotels-xml/hotels-xml/Hotels.xsd";
+        public static string xmlURL = "https://malmar10.github.io/Hotels-xml/Hotels.xml";
+        public static string xmlErrorURL = "https://malmar10.github.io/Hotels-xml/HotelsErrors.xml";
+        public static string xsdURL = "https://malmar10.github.io/Hotels-xml/Hotels.xsd";
 
         public static void Main(string[] args)
         {
